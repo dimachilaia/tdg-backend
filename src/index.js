@@ -3,6 +3,7 @@ import data from './data.json' assert {type: "json"}
 import cors from '@koa/cors';
 
 const app = new koa();
+const port = process.env.PORT || 3001
 app.use(cors());
 
 app.use(async ctx => {
@@ -11,4 +12,4 @@ app.use(async ctx => {
 
   
 
-app.listen(3001);
+app.listen(port);
